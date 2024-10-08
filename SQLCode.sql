@@ -54,7 +54,7 @@ VALUES
 (NULL, "shoe",100.00,"shoe it is used to wear for office ");
 
 -- 1. Retrieve all customers who have placed an order in the last 30 days.
-SELECT * FROM customers a 
+SELECT customer_name FROM customers a 
 JOIN orders b ON a.id = b.customer_id
 WHERE b.order_date >= CURDATE() - INTERVAL 30 DAY;
 
